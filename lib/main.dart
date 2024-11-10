@@ -79,9 +79,7 @@ class HomeActivity extends StatelessWidget{
                 padding: const EdgeInsets.all(10.0),
                 child: Text('If you submit code directly copy from chatgpt then mark will 0',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),maxLines: 3,),
               ),
-              SizedBox(
-                height: 20,
-              ),
+
 
             ],
           ),
