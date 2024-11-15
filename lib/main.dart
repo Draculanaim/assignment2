@@ -11,79 +11,48 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Assignment 2',
-      home: HomeActivity(),
+      title: 'Live_Test_2',
+      home: Home(),
     );
   }
 
 }
 
-class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
+class Home extends StatelessWidget{
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Profile'),
-        backgroundColor: Colors.amber,
-        //toolbarHeight: ,
+        title: Text('Need Blood',style: TextStyle(
+          color: Colors.white
+        ),),
+        backgroundColor: Colors.red,
+        centerTitle: true,
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.add)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.settings)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.call)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.add,color: Colors.white,))
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Center(
-            child: Column(
-              children: [
-                CircleAvatar(
-                  radius: 90,
-                  child: Icon(Icons.icecream_outlined,size: 120,),
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text('Ice Cream is very delicious right ?',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                CircleAvatar(
-                  radius: 90,
-                  child: Icon(Icons.code,size: 120,),
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text('Programming is not boring if you love it',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                CircleAvatar(
-                  radius: 90,
-                  child: Icon(Icons.egg_outlined,size: 120,),
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text('If you submit code directly copy from chatgpt then mark will 0',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),maxLines: 3,),
-                ),
-              ],
-            ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CircleAvatar(
+            backgroundColor: Colors.grey[700],
+            radius: 100,
+            child: Icon(Icons.bloodtype_outlined,size: 80,color: Colors.red,),
           ),
+            SizedBox(
+              height: 8,
+            ),
+            Text('Donate Blood',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+
+          ],
         ),
+
       ),
-    );
+    ) ;
   }
 }
