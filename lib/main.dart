@@ -42,7 +42,7 @@ class Home extends StatelessWidget{
             CircleAvatar(
             backgroundColor: Colors.grey[700],
             radius: 100,
-            child: Icon(Icons.bloodtype_outlined,size: 80,color: Colors.red,),
+            child: Icon(Icons.bloodtype_outlined,size: 110,color: Colors.red,),
           ),
             SizedBox(
               height: 8,
